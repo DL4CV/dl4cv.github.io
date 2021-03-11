@@ -4,10 +4,10 @@ course_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Na
 course_semester: "Fall 1998"
 
 baseurl: "/" # the subpath of your site, e.g. /blog/
-url: "http://dl4cv.github.io/" # the base hostname & protocol for your site
+url: "https://dl4cv.github.io/" # the base hostname & protocol for your site
 
 schoolname: "Hogwarts"
-schoolurl: "https://hogwarts.edu"
+schoolurl: "https://www.weizmann.ac.il"
 twitter_username: username 
 
 address: |
