@@ -36,14 +36,14 @@ Once logged on to the WEXAC cluster, follow these steps:
 
 ----------
 
-For those who do not already have a user account on WAIC: we will allocate a temporary user for you, named “classXX”.
-We will mail you a “secret key” file “classXX-key”.
+For those who do not already have a user account on WAIC: we will allocate a temporary user for you, named `classXX`.
+We will mail you a “secret key” file `classXX-key`.
 To use it (with mobaXterm):
-Save the locally on your windows machine in `C:\Users\<your account>\Documents\MobaXterm\home`
-Open mobaXterm
-`chmod 600 classXX-key`
-Login to WAIC access server:
-`ssh access3.wexac.weizmann.ac.il -l classXX -i classXX-key`
+- Save the locally on your windows machine in `C:\Users\<your account>\Documents\MobaXterm\home`
+- Open mobaXterm
+  `chmod 600 classXX-key`
+- Login to WAIC access server:
+  `ssh access3.wexac.weizmann.ac.il -l classXX -i classXX-key`
 Replace “XX” with the actual number of the account you were given.   
 
 ----------
@@ -52,7 +52,7 @@ Replace “XX” with the actual number of the account you were given.
 Interactive jobs enable us to do command line operations on a Resource Server.
 You can submit an interactive job with 16GiB of RAM, 4 CPU threads, 1 GPU:
 
-    $ bsub -q waic-long -gpu num=1:j_exclusive=yes -R rusage[mem=16384] -R affinity[thread*4] -Is /bin/bash
+    $ bsub -q gpu-long -gpu num=1:j_exclusive=yes -R rusage[mem=16384] -R affinity[thread*4] -Is /bin/bash
  
 ---------- 
  
