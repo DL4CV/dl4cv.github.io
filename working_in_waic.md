@@ -4,11 +4,12 @@ For a more thorough version see [the extended guide](https://paper.dropbox.com/p
 
 ----------
 # First-Time Configurations
+
 ## Prerequisites
 - To connect to the WEXAC cluster, install MobaXterm from [this link](https://mobaxterm.mobatek.net/download.html).
 - To edit and debug your code comfortably on the WEXAC cluster, install VS Code from [this link](https://code.visualstudio.com/).
-- Make sure your user is permitted access to the WEXAC cluster. This could be taken care of by contacting the help desk.
 - If you are not at Weizmann, make sure you are connected to the WIS network through VPN.
+
 ## MobaXterm Configurations
 
 Apply some general configurations to MobaXterm:
@@ -34,11 +35,24 @@ Once logged on to the WEXAC cluster, follow these steps:
     $       # reconnect
 
 ----------
-    
-**Example**
-You can submit an interactive job with 16GiB of RAM, 4 CPU threads, 1 GPU and with a `DISPLAY` variable set:
 
-    $ bsub -q waic-long -gpu num=1:j_exclusive=yes -R rusage[mem=16384] -R affinity[thread*4] -env DISPLAY="1.2.3.4:0.0" -Is /bin/bash
+For those who do not already have a user account on WAIC: we will allocate a temporary user for you, named “classXX”.
+We will mail you a “secret key” file “classXX-key”.
+To use it (with mobaXterm):
+Save the locally on your windows machine in `C:\Users\<your account>\Documents\MobaXterm\home`
+Open mobaXterm
+`chmod 600 classXX-key`
+Login to WAIC access server:
+`ssh access3.wexac.weizmann.ac.il -l classXX -i classXX-key`
+Replace “XX” with the actual number of the account you were given.   
+
+----------
+    
+## Interactive Job
+Interactive jobs enable us to do command line operations on a Resource Server.
+You can submit an interactive job with 16GiB of RAM, 4 CPU threads, 1 GPU:
+
+    $ bsub -q waic-long -gpu num=1:j_exclusive=yes -R rusage[mem=16384] -R affinity[thread*4] -Is /bin/bash
  
 ---------- 
  
