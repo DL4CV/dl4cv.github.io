@@ -38,12 +38,13 @@ Once logged on to the WEXAC cluster, follow these steps:
 
 For those who do not already have a user account on WAIC: we will allocate a temporary user for you, named `classXX`.
 We will mail you a “secret key” file `classXX-key`.
-To use it (with mobaXterm):
+To use it (with mobaXterm):  
 - Save the locally on your windows machine in `C:\Users\<your account>\Documents\MobaXterm\home`
-- Open mobaXterm
+- Open mobaXterm  
   `chmod 600 classXX-key`
-- Login to WAIC access server:
-  `ssh access3.wexac.weizmann.ac.il -l classXX -i classXX-key`
+- Login to WAIC access server:  
+  `ssh access3.wexac.weizmann.ac.il -l classXX -i classXX-key`  
+
 Replace “XX” with the actual number of the account you were given.   
 
 ----------
