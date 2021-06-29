@@ -64,7 +64,7 @@ In order to run Jupyter as a bsub command, add the following lines to your `.lsf
 
     $ module load miniconda/4.7.12
     $ . activate
-    $ conda activate [your-env]
+    $ conda activate [your-env]  # for example: /home/labs/waic/shared/.conda/envs/gpu-21.06
     
     $ JUPYTER_RUNTIME_DIR="${HOME}/.cache/jupyter-runtime/$(shuf -i 100000-999999 -n 1)"
     $ export JUPYTER_RUNTIME_DIR
