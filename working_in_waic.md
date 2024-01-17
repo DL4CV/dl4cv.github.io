@@ -30,7 +30,7 @@ Configure an SSH session to connect to the WEXAC cluster:
 
 Once logged on to the WEXAC cluster, follow these steps:
 
-    $ bash /home/labs/waic/shared/scripts/fix-bashrc/fix-bashrc
+    $ bash /home/projects/bagon/shared/scripts/fix-bashrc/fix-bashrc
     $ exit  # or just Ctrl+D
     $       # reconnect
 
@@ -64,7 +64,7 @@ In order to run Jupyter as a bsub command, add the following lines to your `.lsf
 
     $ module load miniconda/4.7.12
     $ . activate
-    $ conda activate [your-env]  # for example: /home/labs/waic/shared/.conda/envs/gpu-21.06
+    $ conda activate [your-env]  # for example: /home/projects/bagon/shared/.conda/envs/gpu-21.06
     
     $ JUPYTER_RUNTIME_DIR="${HOME}/.cache/jupyter-runtime/$(shuf -i 100000-999999 -n 1)"
     $ export JUPYTER_RUNTIME_DIR
